@@ -1,0 +1,172 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --nav-background-color: #F55A5A;
+  --box-background-color: rgb(250, 227, 227);
+  --box-shadow-color: rgba(145, 142, 155, 0.5);
+  --link-color: #5b6166;
+}
+
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --nav-background-color: #333;
+  --box-background-color: #1e1e1e;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --link-color: #b3b3b3;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  height: 100vh;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 5rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 2rem var(--box-shadow-color);
+  margin-top: 2.5rem;
+}
+
+.options {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.options a,
+.reactLogo {
+  color: var(--text-color);
+  border-top: 5px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.reactLogo {
+  padding: 1rem;
+}
+
+.logo {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+button {
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.mainSection {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto ;
+  background-color: var(--box-background-color);
+  box-shadow: 0 0.5rem 2rem var(--box-shadow-color);
+  border-radius: 0.5rem;
+}
+
+.bodySection {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bodySection:hover {
+  box-shadow: 0 0.5rem 0.6rem var(--box-shadow-color);
+}
+
+.countryImg {
+  width: 35%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.countryHeader {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.countryName {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.googleLink {
+  font-size: 14px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.countryDate {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.countryDesc {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.countryTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  position: relative; 
+  font-weight: bolder;
+}
+
+.countryTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 0;
+  height: 2px; 
+  background-color: var(--text-color); 
+  transition: width 0.3s ease; 
+}
+
+.countryTitle:hover::after {
+  width: 5.2rem; 
+}
